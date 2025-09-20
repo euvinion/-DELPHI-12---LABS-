@@ -1,0 +1,25 @@
+unit DB_Produtos;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDM_Produtos = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM_Produtos: TDM_Produtos;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

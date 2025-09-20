@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2025/08/14 15:08:14.000.275,=C:\Users\vinid\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/08/14 15:13:56.000.651,C:\Users\vinid\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\vinid\Desktop\[ DELPHI PROJECTS ]\[ CALCULADORA ]\Calculadora.pas</Transaction>
-    <Transaction>2025/08/14 15:13:56.000.651,C:\Users\vinid\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\vinid\Desktop\[ DELPHI PROJECTS ]\[ CALCULADORA ]\Calculadora.dfm</Transaction>
-    <Transaction>2025/08/14 15:36:28.000.708,C:\Users\vinid\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\vinid\Desktop\[ DELPHI PROJECTS ]\[ CALCULADORA ]\Project1.dproj</Transaction>
-  </Transactions>
-</BorlandProject>

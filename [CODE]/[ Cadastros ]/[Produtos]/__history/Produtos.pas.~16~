@@ -1,0 +1,87 @@
+unit Produtos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Samples.Spin;
+
+type
+  TFrmCadProdutos = class(TForm)
+    Base: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    EdtCodProduto: TEdit;
+    EdtNomeProduto: TEdit;
+    EdtDescProd: TEdit;
+    EdtEstoqueAtual: TEdit;
+    EdtUnMedida: TEdit;
+    EdtFornecedor: TEdit;
+    EdtCodBarras: TEdit;
+    BtnSalvar: TButton;
+    BtnEditar: TButton;
+    BtnLimpar: TButton;
+    BtnExcluir: TButton;
+    CbCadCategoria: TComboBox;
+    SpEdtPrecoVenda: TSpinEdit;
+    SpEdtPrecoCusto: TSpinEdit;
+    procedure BtnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadProdutos: TFrmCadProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses Login, Sistema;
+
+procedure TFrmCadProdutos.BtnSalvarClick(Sender: TObject);
+var
+  i: Integer;
+begin
+
+  for i := 0 to Self.ComponentCount - 1 do
+  begin
+    if Self.Components[i] is TEdit then
+    begin
+      if Trim(TEdit(Self.Components[i]).Text) = '' then
+      begin
+        ShowMessage('Preencha o campo:' + TEdit(Self.Components[i]).Name);
+        TEdit(Self.Components[i]).SetFocus;
+        Exit;
+      end;
+    end;
+  end;
+
+  ShowMessage('Todos os campos foram preenchidos, pode salvar!.');
+
+  for i := 0 to Self.ComponentCount - 1 do
+  begin
+    if Self.Components[i] is TEdit then
+    begin
+      TEdit(Self.Components[i]).Clear;
+      //CbCadCategoria.Clear;
+      SpEdtPrecoVenda.Clear;
+      SpEdtPrecoCusto.Clear;
+    end;
+  end;
+
+end;
+
+end.

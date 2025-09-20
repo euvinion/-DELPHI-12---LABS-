@@ -1,0 +1,32 @@
+object DM_Produtos: TDM_Produtos
+  Height = 480
+  Width = 640
+  object FDManager1: TFDManager
+    FormatOptions.AssignedValues = [fvMapRules]
+    FormatOptions.OwnMapRules = True
+    FormatOptions.MapRules = <>
+    Active = True
+    Left = 224
+    Top = 136
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=pdv'
+      'Password=1551'
+      'DriverID=MySQL')
+    Left = 312
+    Top = 176
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 400
+    Top = 168
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 
+      'C:\Users\vinid\Desktop\[ DELPHI PROJECTS ]\[ PDV ]\Win32\Lib\lib' +
+      'mySQL.dll'
+    Left = 512
+    Top = 368
+  end
+end
