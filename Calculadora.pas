@@ -84,7 +84,8 @@ begin
 
 end;
 
-(*
+// ARRUMAR
+(* 
 procedure TFrmCalculadora.FormKeyPress(Sender: TObject; var Key: Char);
 begin
   case Key of
@@ -138,14 +139,14 @@ begin
       begin
         if Num2 = 0 then
         begin
-          ShowMessage('Erro: divis„o por zero');
+          ShowMessage('Erro: divis√£o por zero');
           Exit;
         end;
         Result := Num1 / Num2;
       end;
   else
     begin
-      ShowMessage('OperaÁ„o inv·lida');
+      ShowMessage('Opera√ß√£o inv√°lida');
       Exit;
     end;
   end;
